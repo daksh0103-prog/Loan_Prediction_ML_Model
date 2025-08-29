@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 import random
 
 st.header('Loan Eligibility Prediction Using Machine Learning')
@@ -32,7 +32,7 @@ st.markdown(c)
 st.image('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg')
 
 with open("loan_pred.pkl", "rb") as file:
-    chatgpt = joblib.load(file)   # Your trained pipeline
+    chatgpt = pickle.load(file)   # Your trained pipeline
 
 
 #laod data 
