@@ -3,6 +3,8 @@ import pandas as pd
 import pickle
 import random
 
+import joblib
+joblib.dump(chatgpt, "loan_pred.pkl")
 st.header('Loan Eligibility Prediction Using Machine Learning')
 
 c = '''Loan Prediction using Machine Learning Loan Prediction is an essential problem in the banks and finance industries. Accurately prediction whether a loans will be approved or rejected can help financial institutions to manage risk, reduce defaults, and increase profitability.
@@ -32,7 +34,7 @@ st.markdown(c)
 st.image('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg')
 
 with open("loan_pred.pkl", "rb") as file:
-    chatgpt = pickle.load(file)   # Your trained pipeline
+    chatgpt = joblib.load(file)   # Your trained pipeline
 
 
 #laod data 
