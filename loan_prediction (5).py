@@ -6,9 +6,12 @@ import pickle
 # Load trained model
 # -----------------------------
 @st.cache_resource
-with open('loan_pred.pkl','rb') as f:
-    chatgpt = pickle.load(f)
+def load_model():
+    with open('loan_pred.pkl','rb') as f:
+         chatgpt = pickle.load(f)
+    return model
 
+model = load_model()
 # -----------------------------
 st.image('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg')
 # Title
