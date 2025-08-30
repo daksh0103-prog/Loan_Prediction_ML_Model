@@ -6,7 +6,7 @@ import pickle
 # Load trained model
 # -----------------------------
 @st.cache_resource
-with open('heart_disease_pred.pkl','rb') as f:
+with open('loan_pred.pkl','rb') as f:
     chatgpt = pickle.load(f)
 
 # -----------------------------
