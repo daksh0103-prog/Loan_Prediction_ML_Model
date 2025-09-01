@@ -1,18 +1,13 @@
 import streamlit as st
 import pandas as pd
-import joblib
 import pickle
 
-# Load with joblib
-model = joblib.load("loan_pred.pkl")
-
-# Save again with pickle
 with open("loan_pred.pkl", "wb") as file:
-    pickle.dump(model, file)
+    pickle.dump(model_lr, file)
 
 
 
-model = load_model()
+model_lr = load_model()
 
 # -----------------------------
 # App UI
