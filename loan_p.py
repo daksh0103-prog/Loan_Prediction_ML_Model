@@ -8,7 +8,7 @@ def load_model():
     return model
 
 
-model_lr = load_model()
+model = load_model()
 
 # -----------------------------
 # App UI
