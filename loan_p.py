@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 with open("loan_pred.pkl", "wb") as file:
-    pickle.dump(model_lr, file)
+    pickle.dump(model, file)
 
 
 
