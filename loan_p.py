@@ -1,11 +1,15 @@
 import streamlit as st
 import pandas as pd
+import joblib
 import pickle
 
-def load_model():
-    with open("loan_pred.pkl", "rb") as file:
-        model = pickle.load(file)
-    return model
+# Load with joblib
+model = joblib.load("loan_pred.pkl")
+
+# Save again with pickle
+with open("loan_pred.pkl", "wb") as file:
+    pickle.dump(model, file)
+
 
 
 model = load_model()
