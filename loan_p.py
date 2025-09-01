@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-with open("loan_pred.pkl", "wb") as file:
-    pickle.dump(model, file)
-
+def load_model():
+    with open("loan_pred.pkl", "wb") as file:
+        model = pickle.load(file)
+    return model
 
 
 model_lr = load_model()
